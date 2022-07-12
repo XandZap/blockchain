@@ -1,0 +1,8 @@
+
+Doar LBC ao jogador = await contract.methods.mintLbc(100).send({ from: accounts[0] })
+Start Game = await contract.methods.startGame(0).call()
+Quantos LBC jogador tem = await contract.methods.balances(accounts[0]).call()
+Quantos LBC tem no jogo atual = await contract.methods.getBalanceIndividual().call({from: accounts[0]})
+Envia LBC para resposta certa = await contract.methods.correctAnswer(5).send({from: accounts[0]})
+Retira LBC para resposta errada = await contract.methods.incorrectAnswer(5).send({from: accounts[0]})
+Jogador recebe seus ganhos = await contract.methods.withdraw().send({from: accounts[0]})

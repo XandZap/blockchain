@@ -1,0 +1,42 @@
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useEth } from "../../contexts/EthContext";
+
+export default function Game({ balance }) {
+  const {
+    state: { contract, accounts },
+  } = useEth();
+
+  const [individualBalance, setIndividualBalance] = useState(0);
+
+  useEffect(() => {
+    const getBalance = async () => {
+      const newBalance = await contract.methods.getBalanceIndividual().call({from: accounts[0]});
+      setIndividualBalance(newBalance);
+    };
+    getBalance();
+  }, [accounts, contract]);
+
+  const handleSuccess = async () => {
+    const success = await contract.methods.correctAnswer(5).send({from: accounts[0]});
+    console.log("success :", success);
+    const newBalance = await contract.methods.getBalanceIndividual().call({from: accounts[0]});
+    console.log("newBalance :", newBalance);
+    setIndividualBalance(newBalance);
+  };
+  const handleFail = async () => {
+    const claim = await contract.methods.incorrectAnswer(5).send({from: accounts[0]})
+    console.log('claim :', claim)
+  };
+
+  return (
+    <div>
+      <p>individual balance: {individualBalance}</p>
+      game
+      <p>pergunta 1</p>
+      <p>Javascript é legal?</p>
+      <button onClick={handleSuccess}>sim</button>
+      <button onClick={handleFail}>nao</button>
+    </div>
+  );
+}

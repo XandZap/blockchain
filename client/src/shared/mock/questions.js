@@ -1,0 +1,38 @@
+export const questions = [
+  {
+    number: 1,
+    text: "Sobre a tecnologia Blockchain:",
+    a: "Só existe um tipo de tecnologia blockchain.",
+    b: "Há várias blockchains, cada uma com sua finalidade.",
+    c: "Blockchain privada possui total transparência.",
+    d: "Blockchain só pode ser utilizada para transferência de valores financeiros.",
+    answer: "b",
+  },
+  {
+    number: 2,
+    text: "Sobre Criptomoedas e Comissão de Valores Mobiliários, assinale a alternativa errada.",
+    a: "As  cotas  de  fundos  de  investimento  em  valores  mobiliários  ou  de  clubes  de  investimento  em criptomoedas devem ser registradas na Comissão de Valores Mobiliários -  CVM.",
+    b: "Promessas  de  rendimentos  advindo  do  esforço  de  alguém  que  opere  com  criptomoedas  é considerado valor imobiliário.",
+    c: "No  Brasil,  as  empresas  que  emitam  ICO’s  com   características  de  valor  mobiliário  precisa m  de registro junto à CVM.",
+    d: "O rol do art. 2º da Lei nº 6.385/76 (CVM) é taxativo.",
+    answer: "d",
+  },
+  {
+    number: 3,
+    text: "  Sobre exchanges de criptomoedas, responda:",
+    a: "Há lei regulamentando esses modelos de negócios, no Brasil.",
+    b: "Apesar  de  não  haver  lei  específica,  devem  se  adequar  às  leis  existentes  no  Brasil,  como  o Código de defesa do Consumidor.",
+    c: "Existe compliance obrigatório para exchanges.",
+    d: "No Brasil, as exchanges não podem aceitar cliente pessoa jurídica.",
+    answer: "b",
+  },
+  {
+    number: 4,
+    text: "Sobre a tecnologia Blockchain:",
+    a: "Só existe um tipo de tecnologia blockchain.",
+    b: "Blockchain privada possui total transparência.",
+    c: "Há várias blockchains, cada uma com sua finalidade.",
+    d: "Blockchain só pode ser utilizada para transferência de valores financeiros.",
+    answer: "c",
+  },
+];
